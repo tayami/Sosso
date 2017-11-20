@@ -1,13 +1,13 @@
 {
-  "name": "tayami/Sosso",
+  "name": "tayami/sosso",
   "description": "php sso tayami Sosso",
   "keywords": [
     "sso",
     "Sosso"
   ],
-  "homepage": "https://github.com/tayami/Sosso",
+  "homepage": "https://github.com/tayami/sosso",
   "support": {
-    "source": "https://github.com/tayami/Sosso"
+    "source": "https://github.com/tayami/sosso"
   },
   "authors": [
     {

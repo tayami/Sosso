@@ -1,9 +1,9 @@
 {
   "name": "tayami/sosso",
-  "description": "php sso tayami Sosso",
+  "description": "php sso tayami sosso",
   "keywords": [
     "sso",
-    "Sosso"
+    "sosso"
   ],
   "homepage": "https://github.com/tayami/sosso",
   "support": {

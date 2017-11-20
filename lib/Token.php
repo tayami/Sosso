@@ -1,8 +1,8 @@
 <?php
 
-namespace Sosso\lib;
+namespace tayami\Sosso\lib;
 
-use Sosso\core\Sso;
+use tayami\Sosso\core\Sso;
 
 class Token
 {

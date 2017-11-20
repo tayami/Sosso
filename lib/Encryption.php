@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosso\lib;
+namespace tayami\Sosso\lib;
 
 class Encryption
 {

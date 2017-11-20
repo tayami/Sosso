@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosso\core;
+namespace tayami\Sosso\core;
 
 class Sso
 {

@@ -1,2 +1,0 @@
-# Sosso
-php sso resolution

@@ -1,0 +1,27 @@
+{
+  "name": "tayami/sosso",
+  "description": "php sso tayami sosso",
+  "keywords": [
+    "sso",
+    "sosso"
+  ],
+  "homepage": "https://github.com/tayami/sosso",
+  "support": {
+    "source": "https://github.com/tayami/sosso"
+  },
+  "authors": [
+    {
+      "name": "taylor feng",
+      "email": "tayami_fighting@yeah.net"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tayami\\Sosso\\": ""
+    }
+  }
+}

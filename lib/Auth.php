@@ -1,8 +1,8 @@
 <?php
 
-namespace tayami\Sosso\lib;
+namespace Tayami\Sosso\Lib;
 
-use tayami\Sosso\core\Sso;
+use Tayami\Sosso\Core\Sso;
 
 class Auth
 {

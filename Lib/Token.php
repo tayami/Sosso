@@ -10,7 +10,7 @@ class Token
 
     public static function checkToken($token)
     {
-        $userInfo = null;
+        $authInfo = null;
         $token = Encryption::decrypt($token);
         if($realAuth = Sso::driver()->get(Auth::HASH_KEY_TOKEN_TO_AUTH_PRE.$token)) {
             if(Sso::driver()->sIsMember(Auth::SET_KEY_AUTH_TOKENS_PRE.$realAuth, $token)) {
@@ -19,7 +19,7 @@ class Token
                 Sso::driver()->del(Auth::HASH_KEY_TOKEN_TO_AUTH_PRE.$token);
             }
         }
-        return $userInfo;
+        return $authInfo;
     }
 
     public static function createToken()

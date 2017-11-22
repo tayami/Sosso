@@ -19,14 +19,14 @@ class Auth
         return self::realAuthToInfo($realAuth);
     }
 
-    public static function auth($uid)
+    public static function auth($info)
     {
         $realAuth      = Encryption::randStr();
         $encryptedText = Encryption::encrypt($realAuth);
 
         // 写cookie,并记录cookie明文对应用户信息
         setcookie(self::AUTH_COOKIE_NAME, $encryptedText, time()+Sso::expire());
-        Sso::driver()->setex(self::STRING_KEY_AUTH_PRE.$realAuth, Sso::expire(), json_encode(['uid' => $uid]));
+        Sso::driver()->setex(self::STRING_KEY_AUTH_PRE.$realAuth, Sso::expire(), json_encode($info));
     }
 
     public static function cancelAuth()

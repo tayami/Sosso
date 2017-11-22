@@ -12,12 +12,18 @@ class Sso
     /**
      * @var
      */
+    private static $cryptKey;
+
+    /**
+     * @var
+     */
     private static $expire;
 
-    public static function init(\Redis $redis, $expire = 86400)
+    public static function init(\Redis $redis, $cryptKey = '', $expire = 86400)
     {
-        self::$redis = $redis;
-        self::$expire = abs((int)$expire);
+        self::$redis    = $redis;
+        self::$cryptKey = $cryptKey;
+        self::$expire   = abs((int)$expire);
     }
 
     /**
@@ -27,7 +33,7 @@ class Sso
     public static function driver()
     {
         if (!(self::$redis instanceof \Redis)) {
-            throw new \Exception('not init');
+            throw new \Exception('please init redis');
         }
 
         return self::$redis;
@@ -36,5 +42,10 @@ class Sso
     public static function expire()
     {
         return self::$expire;
+    }
+
+    public static function cryptKey()
+    {
+        return self::$cryptKey;
     }
 }
